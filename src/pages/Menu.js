@@ -17,7 +17,7 @@ const foodItems = [
     name: "Beef Cheese Burger",
     category: "Burgers",
     price: "Rs.850",
-   image: process.env.PUBLIC_URL + "/images/burger.jfif",
+   image: process.env.PUBLIC_URL + "/images/Burger.jfif",
     description: "Juicy grilled beef patty loaded with melted cheese."
   },
   {

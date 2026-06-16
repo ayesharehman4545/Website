@@ -2,7 +2,7 @@ import React from "react";
 
 const FeaturedDishes = () => {
   const dishes = [
-  { name: "Burger", img: process.env.PUBLIC_URL + "/images/burger.jfif" },
+  { name: "Burger", img: process.env.PUBLIC_URL + "/images/Burger.jfif" },
   { name: "Shawarma", img: process.env.PUBLIC_URL + "/images/shawarma.jfif" },
   { name: "Pizza", img: process.env.PUBLIC_URL + "/images/pizza.jfif" },
   { name: "Fries", img: process.env.PUBLIC_URL + "/images/fries.jfif" },
