@@ -7,7 +7,16 @@ const Navbar = () => {
       style={{  backdropFilter: 'blur(8px)',  backgroundColor: 'rgba(0, 0, 0, 0.4)', transition: 'background-color 0.3s ease'  }}>
       <div className="container">
         <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-          <img src="/images/logo1.png" alt="Foodies" style={{ height: '70px', width: 'auto', borderRadius: '6px', objectFit: 'contain' }} /> 
+         <img
+  src={process.env.PUBLIC_URL + "/images/logo1.png"}
+  
+  style={{
+    height: "70px",
+    width: "auto",
+    borderRadius: "6px",
+    objectFit: "contain"
+  }}
+/>
         </a>
         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>

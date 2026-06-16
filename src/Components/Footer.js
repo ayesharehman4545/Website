@@ -8,10 +8,15 @@ const Footer = () => {
           
           <div className="col-lg-3 col-md-6">
             <div className="d-flex align-items-center gap-2 mb-3">
-              <img 
-                src="/images/logo1.png"  
-                style={{ height: '50px', width: 'auto', borderRadius: '6px', objectFit: 'contain' }} 
-              />
+              <img src={process.env.PUBLIC_URL + "/images/logo1.png"}
+              alt="Foodies Logo"
+              style={{
+               height: "50px",
+                 width: "auto",
+                 borderRadius: "6px",
+                 objectFit: "contain"
+                  }}
+/>
             </div>
             <p className="small text-muted" style={{ lineHeight: '1.7' }}>
               We serve the freshest and most delicious meals crafted by our expert chefs. Your satisfaction is our top priority.
