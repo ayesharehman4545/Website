@@ -1,72 +1,72 @@
 import React from 'react';
 
 const Testimonials = () => {
-  const feedbackData = [
-    {
-      id: 1,
-      name: "Ayesha",
-      role: "Food Blogger",
-      image: "/images/pic1.jfif",
-      rating: 5,
-      comment: "The food was absolutely delicious and arrived piping hot! The flavors were perfectly balanced. Highly recommended!"
-    },
-    {
-      id: 2,
-      name: "Noor ul ain",
-      role: "Food Blogger",
-      image: "/images/pic2.jfif",
-      rating: 5,
-      comment: "Amazing customer service and top-notch quality. This has officially become my go-to place for weekly cravings."
-    },
-    {
-      id: 3,
-      name: "Shiza",
-      role: "Food Blogger",
-      image: "/images/pic3.jfif",
-      rating: 5,
-      comment: "Every dish we ordered surpassed our expectations. Clean packaging and fresh ingredients used throughout."
-    },
-    {
-      id: 4,
-      name: "Faiqa",
-      role: "Food Blogger",
-      image: "/images/pic4.jfif",
-      rating: 4,
-      comment: "Incredibly fast delivery and the Zinger burger was pure perfection. Will definitely be ordering again soon!"
-    },
-    {
-      id: 5,
-      name: "Maryam",
-      role: "Food Blogger",
-      image: "/images/pic5.jfif",
-      rating: 4,
-      comment: "The best pizza in town hands down! The crust was thin, crispy, and the toppings were incredibly generous."
-    },
-    {
-      id: 6,
-      name: "Muaaz",
-      role: "Food Blogger",
-      image: "/images/pic6.jfif",
-      rating: 5,
-      comment: "Super healthy options that actually taste fantastic. Great value for money and wonderful presentation."
-    },
-    {
-      id: 7,
-      name: "Malaika",
-      role: "Food Blogger",
-      image: "/images/pic7.jfif",
-      rating: 4,
-      comment: "Prompt delivery, polite riders, and mouth-watering dishes. Their peri peri bites are an absolute must-try!"
-    },
-    {
-      id: 8,
-      name: "Romman",
-      role: "Food Blogger",
-      image: "/images/pic8.jfif",
-      rating: 5,
-      comment: "An exceptional culinary experience at home. The pasta was creamy, rich, and perfectly cooked. 10/10!"
-    }
-  ];
+ const feedbackData = [
+  {
+    id: 1,
+    name: "Ayesha",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic1.jfif",
+    rating: 5,
+    comment: "The food was absolutely delicious and arrived piping hot! The flavors were perfectly balanced. Highly recommended!"
+  },
+  {
+    id: 2,
+    name: "Noor ul ain",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic2.jfif",
+    rating: 5,
+    comment: "Amazing customer service and top-notch quality. This has officially become my go-to place for weekly cravings."
+  },
+  {
+    id: 3,
+    name: "Shiza",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic3.jfif",
+    rating: 5,
+    comment: "Every dish we ordered surpassed our expectations. Clean packaging and fresh ingredients used throughout."
+  },
+  {
+    id: 4,
+    name: "Faiqa",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic4.jfif",
+    rating: 4,
+    comment: "Incredibly fast delivery and the Zinger burger was pure perfection. Will definitely be ordering again soon!"
+  },
+  {
+    id: 5,
+    name: "Maryam",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic5.jfif",
+    rating: 4,
+    comment: "The best pizza in town hands down! The crust was thin, crispy, and the toppings were incredibly generous."
+  },
+  {
+    id: 6,
+    name: "Muaaz",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic6.jfif",
+    rating: 5,
+    comment: "Super healthy options that actually taste fantastic. Great value for money and wonderful presentation."
+  },
+  {
+    id: 7,
+    name: "Malaika",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic7.jfif",
+    rating: 4,
+    comment: "Prompt delivery, polite riders, and mouth-watering dishes. Their peri peri bites are an absolute must-try!"
+  },
+  {
+    id: 8,
+    name: "Romman",
+    role: "Food Blogger",
+    image: process.env.PUBLIC_URL + "/images/pic8.jfif",
+    rating: 5,
+    comment: "An exceptional culinary experience at home. The pasta was creamy, rich, and perfectly cooked. 10/10!"
+  }
+];
 
   return (
     <section className="py-5" style={{ backgroundColor: '#fffdfb' }}>
