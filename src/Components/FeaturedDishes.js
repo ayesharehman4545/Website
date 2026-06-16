@@ -2,17 +2,17 @@ import React from "react";
 
 const FeaturedDishes = () => {
   const dishes = [
-  { name: "Zinger Burger", img: process.env.PUBLIC_URL + "/images/burger.jfif" },
-  { name: "Chicken Shawarma", img: process.env.PUBLIC_URL + "/images/shawarma.jfif" },
-  { name: "Chicken Pizza", img: process.env.PUBLIC_URL + "/images/pizza.jfif" },
-  { name: "Loaded Fries", img: process.env.PUBLIC_URL + "/images/fries.jfif" },
-  { name: "Chicken Broast", img: process.env.PUBLIC_URL + "/images/broast.jfif" },
-  { name: "Club Sandwich", img: process.env.PUBLIC_URL + "/images/sandwich.jfif" },
+  { name: "Burger", img: process.env.PUBLIC_URL + "/images/burger.jfif" },
+  { name: "Shawarma", img: process.env.PUBLIC_URL + "/images/shawarma.jfif" },
+  { name: "Pizza", img: process.env.PUBLIC_URL + "/images/pizza.jfif" },
+  { name: "Fries", img: process.env.PUBLIC_URL + "/images/fries.jfif" },
+  { name: "Broast", img: process.env.PUBLIC_URL + "/images/broast.jfif" },
+  { name: "Sandwich", img: process.env.PUBLIC_URL + "/images/sandwich.jfif" },
   { name: "Chicken Wings", img: process.env.PUBLIC_URL + "/images/wings.jfif" },
-  { name: "Chicken Roll", img: process.env.PUBLIC_URL + "/images/roll.jfif" },
+  { name: " Rolls", img: process.env.PUBLIC_URL + "/images/roll.jfif" },
   { name: "Steak", img: process.env.PUBLIC_URL + "/images/steak.jfif" },
   { name: "Peri Peri Bites", img: process.env.PUBLIC_URL + "/images/bites.jfif" },
-  { name: "Chicken Pasta", img: process.env.PUBLIC_URL + "/images/pasta.jfif" },
+  { name: "Pasta", img: process.env.PUBLIC_URL + "/images/pasta.jfif" },
   { name: "Tacos", img: process.env.PUBLIC_URL + "/images/tacos.jfif" },
 ];
 

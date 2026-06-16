@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section 
@@ -20,9 +20,9 @@ const Hero = () => {
         <p className="lead text-light mb-4" style={{ maxWidth: '600px', margin: '0 auto', opacity: 0.9 }}>
           Enjoy the best meals made by our expert chefs.
         </p>
-        <button className="btn btn-danger btn-lg rounded-pill px-5 py-3 fw-bold shadow">
-          Explore Menu
-        </button>
+        <Link to="/menu" className="btn btn-danger btn-lg rounded-pill px-4 fw-bold">
+         Explore Menu 
+        </Link>
       </div>
     </section>
   );
