@@ -5,7 +5,8 @@ const Hero = () => {
     <section 
       className="d-flex align-items-center justify-content-center text-center text-white" 
       style={{ 
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${process.env.PUBLIC_URL}/images/background.jfif)`,        backgroundSize: 'cover',
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(${process.env.PUBLIC_URL + "/images/background.jfif"})`,
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         minHeight: '90vh', 

@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
+  const closeMenu = () => {
+  const navbar = document.getElementById("navbarNav");
+  if (navbar.classList.contains("show")) {
+    navbar.classList.remove("show");
+  }
+};
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm"
@@ -40,37 +47,37 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto align-items-center">
 
             <li className="nav-item px-2">
-              <Link className="nav-link fw-medium text-warning" to="/">
-                Home
-              </Link>
+             <Link className="nav-link fw-medium text-warning" to="/"  onClick={closeMenu} >
+              Home
+            </Link>
             </li>
 
             <li className="nav-item px-2">
-              <Link className="nav-link fw-medium text-white-50" to="/menu">
+                <Link className="nav-link fw-medium text-white-50"  to="/menu" onClick={closeMenu}>
                 Menu
-              </Link>
+                </Link>
             </li>
 
             <li className="nav-item px-2">
-              <Link className="nav-link fw-medium text-white-50" to="/about">
+              <Link className="nav-link fw-medium text-white-50" to="/about"onClick={closeMenu}>
                 About
               </Link>
             </li>
 
             <li className="nav-item px-2">
-              <Link className="nav-link fw-medium text-white-50" to="/reviews">
-                Reviews
-              </Link>
+              <HashLink smooth  className="nav-link fw-medium text-white-50" to="/#reviews" onClick={closeMenu}>
+              Reviews
+              </HashLink>
             </li>
 
             <li className="nav-item px-2">
-              <Link className="nav-link fw-medium text-white-50" to="/contact">
-                Contact
+              <Link className="nav-link fw-medium text-white-50"  to="/contact" onClick={closeMenu}>
+              Contact
               </Link>
             </li>
 
             <li className="nav-item ms-lg-3">
-              <Link to="/menu">
+              <Link to="/menu" onClick={closeMenu} >
                 <button className="btn btn-danger btn-sm rounded-pill px-4 fw-bold">
                   Order Now
                 </button>

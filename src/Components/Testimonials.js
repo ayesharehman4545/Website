@@ -69,7 +69,8 @@ const Testimonials = () => {
 ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: '#fffdfb' }}>
+    <section
+  id="reviews"  className="py-5" style={{ backgroundColor: '#fffdfb' }}>
       <div className="container">
         
         <div className="text-center mb-5">
