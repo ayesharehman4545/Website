@@ -4,19 +4,19 @@ import Hero from '../Components/Hero';
 import FeaturedDishes from '../Components/FeaturedDishes';
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Testimonials from '../Components/Testimonials';
-import Footer from '../Components/Footer'; 
+import Footer from '../Components/Footer';
 
-function App() {
+function Home() {
   return (
     <div>
       <Navbar />
       <Hero />
       <FeaturedDishes />
-       <WhyChooseUs />
+      <WhyChooseUs />
       <Testimonials />
-      <Footer /> 
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default Home;

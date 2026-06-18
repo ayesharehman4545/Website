@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedDishes = () => {
   const dishes = [
@@ -70,9 +71,10 @@ const FeaturedDishes = () => {
                     {item.price}
                   </p>
 
-                  <button className="btn btn-danger rounded-pill px-4 py-2 fw-semibold">
-                    Order Now
-                  </button>
+                  <Link to="/menu"
+                    className="btn btn-danger rounded-pill px-4 py-2 fw-semibold">
+                     Order Now
+                  </Link>
                 </div>
               </div>
             </div>

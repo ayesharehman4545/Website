@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Menu() {
-
+function Menu({ addToCart, cart }) {
 const foodItems = [
   {
     id: 1,
@@ -468,38 +468,28 @@ const foodItems = [
   }
 
 ];
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [cart, setCart] = useState([]);
+ const [selectedCategory, setSelectedCategory] = useState("All");
 
   const categories = [
-    "All", 
+    "All",
     ...new Set(foodItems.map((item) => item.category)),
   ];
 
- const filteredItems =
-  selectedCategory === "All"
-    ? foodItems
-    : foodItems.filter((item) => item.category === selectedCategory);
-
-const addToCart = (item) => {
-  setCart([...cart, item]);
-
-  setTimeout(() => {
-    document
-      .getElementById("cart-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  }, 100);
-};
-
-  return (
+  const filteredItems =
+    selectedCategory === "All"
+      ? foodItems
+      : foodItems.filter(
+          (item) => item.category === selectedCategory
+        );
+    return (
     <div className="container py-5 mt-5">
-     <div className="d-flex justify-content-between align-items-center mb-4">
-  <h1>Our Menu</h1>
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h1>Our Menu</h1>
 
-  <button className="btn btn-danger">
-    Cart ({cart.length})
-  </button>
-</div>
+        <Link to="/cart" className="btn btn-danger">
+          🛒 Cart ({cart.length})
+        </Link>
+      </div>
 
       <div className="text-center mb-4">
         {categories.map((category) => (
@@ -522,10 +512,13 @@ const addToCart = (item) => {
           <div key={item.id} className="col-md-4 col-lg-3 mb-4">
             <div className="card h-100 shadow-sm">
               <img
-                src={`${item.image}?w=500`}
+                src={item.image}
                 className="card-img-top"
                 alt={item.name}
-                style={{ height: "220px", objectFit: "cover" }}
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                }}
               />
 
               <div className="card-body">
@@ -535,51 +528,16 @@ const addToCart = (item) => {
 
                 <div className="d-flex justify-content-between align-items-center">
                   <span className="fw-bold">{item.price}</span>
-                  <button
-                     className="btn btn-warning"
-                     onClick={() => addToCart(item)}>
-                      Add To Cart
+
+                  <button className="btn btn-warning" onClick={() => addToCart(item)}>
+                    Add To Cart
                   </button>
                 </div>
               </div>
             </div>
           </div>
         ))}
-          </div>
-
-      <hr />
-
-     <div id="cart-section">
-  <h2 className="mt-5 mb-3">
-    Cart Items ({cart.length})
-  </h2>
-</div>
-
-      <div className="row">
-        {cart.map((item, index) => (
-          <div key={index} className="col-md-3 mb-3">
-            <div className="card shadow-sm">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="card-img-top"
-                style={{
-                  height: "150px",
-                  objectFit: "cover"
-                }}
-              />
-
-              <div className="card-body">
-                <h6>{item.name}</h6>
-                <p className="fw-bold text-danger">
-                  {item.price}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
-
     </div>
   );
 }

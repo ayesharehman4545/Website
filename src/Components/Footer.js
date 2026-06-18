@@ -27,9 +27,9 @@ const Footer = () => {
             <h5 className="fw-bold text-dark mb-3">Links</h5>
             <ul className="list-unstyled d-flex flex-column gap-2 small">
               <li><a href="#" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>Home</a></li>
-              <li><a href="#" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>Menu</a></li>
-              <li><a href="#" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>About Us</a></li>
-              <li><a href="#" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>Contact</a></li>
+              <li><a href="/menu" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>Menu</a></li>
+              <li><a href="/about" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>About Us</a></li>
+              <li><a href="/contact" className="text-decoration-none text-muted" onMouseEnter={(e) => e.target.style.color = '#dc3545'} onMouseLeave={(e) => e.target.style.color = '#6c757d'}>Contact</a></li>
             </ul>
           </div>
 
