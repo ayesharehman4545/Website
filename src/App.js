@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Navbar from "./Components/Navbar";
 import ScrollToTop from "./Components/ScrollToTop";
 
@@ -34,6 +33,7 @@ function App() {
 
   return (
     <>
+  
       <ScrollToTop />
       <Navbar />
 
@@ -50,26 +50,11 @@ function App() {
           }
         />
 
-        <Route
-          path="/about"
-          element={<About />}
-        />
-
-        <Route
-          path="/contact"
-          element={<Contact />}
-        />
-
-        <Route
-          path="/cart"
-          element={
-            <Cart
-              cart={cart}
-              setCart={setCart}
-            />
-          }
-        />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} /> }/>
       </Routes>
+     
     </>
   );
 }
