@@ -77,8 +77,8 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item ms-lg-3">
-              <Link to="/menu" onClick={closeMenu} >
-                <button className="btn btn-danger btn-sm rounded-pill px-4 fw-bold">
+              <Link to="/contact" onClick={closeMenu} >
+               <button className="btn btn-danger btn-sm rounded-pill px-4 fw-bold">
                   Order Now
                 </button>
               </Link>

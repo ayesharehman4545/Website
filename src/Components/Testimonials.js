@@ -28,7 +28,7 @@ const Testimonials = () => {
   },
   {
     id: 4,
-    name: "Faiqa",
+    name: "Zaina",
     role: "Food Blogger",
     image: process.env.PUBLIC_URL + "/images/pic4.jfif",
     rating: 4,

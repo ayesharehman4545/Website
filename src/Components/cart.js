@@ -28,7 +28,10 @@ const Cart = ({ cart, setCart }) => {
   };
 
   const total = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) =>
+      sum +
+      (Number(item.price) || 0) *
+        (Number(item.quantity) || 1),
     0
   );
 
@@ -42,12 +45,13 @@ const Cart = ({ cart, setCart }) => {
       }}
     >
       <div className="container">
-        <h1 className="text-center fw-bold text-danger mb-5 py-5">
+
+        <h1 className="text-center fw-bold text-danger mb-5 pt-5">
           Shopping Cart
         </h1>
 
         {cart.length === 0 ? (
-          <div className="text-center">
+          <div className="text-center py-5">
             <h3>Your Cart Is Empty 😔</h3>
           </div>
         ) : (
@@ -55,34 +59,41 @@ const Cart = ({ cart, setCart }) => {
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="card border-0 shadow mb-4"
-                style={{ borderRadius: "20px" }}
+                className="card border-0 shadow-sm mb-4"
+                style={{
+                  borderRadius: "20px",
+                  overflow: "hidden"
+                }}
               >
-                <div className="row g-0 align-items-center p-3">
+                <div className="row align-items-center p-3">
 
-                  <div className="col-md-3 text-center">
+                  <div className="col-lg-2 col-md-3 col-12 text-center mb-3 mb-md-0">
                     <img
                       src={item.img}
                       alt={item.name}
                       className="img-fluid"
                       style={{
-                        height: "140px",
-                        width: "140px",
+                        width: "120px",
+                        height: "120px",
                         objectFit: "cover",
-                        borderRadius: "15px",
+                        borderRadius: "15px"
                       }}
                     />
                   </div>
 
-                  <div className="col-md-5">
-                    <h4>{item.name}</h4>
-                    <h5 className="text-danger">
-                      Rs. {item.price}
-                    </h5>
+                  <div className="col-lg-4 col-md-4 col-12">
+                    <h4 className="fw-bold">
+                      {item.name}
+                    </h4>
+
+                   <h5 className="text-danger">
+                     Rs. {item.price}
+                        </h5>
                   </div>
 
-                  <div className="col-md-2 text-center">
+                  <div className="col-lg-3 col-md-3 col-12 text-center my-3 my-md-0">
                     <div className="d-flex justify-content-center align-items-center gap-2">
+
                       <button
                         className="btn btn-outline-danger"
                         onClick={() =>
@@ -104,17 +115,19 @@ const Cart = ({ cart, setCart }) => {
                       >
                         +
                       </button>
+
                     </div>
                   </div>
 
-                  <div className="col-md-1 text-center">
-                    <h5>
-                      Rs.
-                      {item.price * item.quantity}
+                  <div className="col-lg-2 col-md-1 col-6 text-center">
+                    <h5 className="fw-bold text-dark">
+                      Rs.{" "}
+                      {(Number(item.price) || 0) *
+                        item.quantity}
                     </h5>
                   </div>
 
-                  <div className="col-md-1 text-center">
+                  <div className="col-lg-1 col-md-1 col-6 text-center">
                     <button
                       className="btn btn-danger"
                       onClick={() =>
@@ -129,15 +142,34 @@ const Cart = ({ cart, setCart }) => {
               </div>
             ))}
 
-            <div className="card border-0 shadow p-4 mt-4">
-              <h3 className="text-end">
-                Total:
-                <span className="text-danger">
-                  {" "}
-                  Rs. {total}
-                </span>
-              </h3>
+            <div
+              className="card border-0 shadow p-4 mt-4"
+              style={{
+                borderRadius: "20px"
+              }}
+            >
+              <div className="d-flex justify-content-between align-items-center flex-wrap">
+
+                <h3 className="fw-bold">
+                  Total:
+                  <span className="text-danger ms-2">
+                    Rs. {total}
+                  </span>
+                </h3>
+
+                <button
+                  className="btn btn-danger px-4 py-2 mt-2 mt-md-0"
+                  style={{
+                    borderRadius: "30px",
+                    fontWeight: "600"
+                  }}
+                >
+                  Proceed To Checkout
+                </button>
+
+              </div>
             </div>
+
           </>
         )}
       </div>
