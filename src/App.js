@@ -17,12 +17,8 @@ function App() {
 
   if (exist) {
     setCart(
-      cart.map((x) =>
-        x.id === item.id
-          ? { ...x, quantity: x.quantity + 1 }
-          : x
-      )
-    );
+      cart.map((x) =>  x.id === item.id ?
+       { ...x, quantity: x.quantity + 1 }  : x ) );
   } else {
     setCart([
       ...cart,
@@ -39,17 +35,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-
-        <Route
-          path="/menu"
-          element={
-            <Menu
-              cart={cart}
-              addToCart={addToCart}
-            />
-          }
-        />
-
+        <Route path="/menu" element={ <Menu cart={cart} addToCart={addToCart}/> } />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} /> }/>

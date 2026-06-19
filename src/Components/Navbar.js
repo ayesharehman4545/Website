@@ -21,25 +21,18 @@ const Navbar = () => {
       <div className="container">
         <Link
           className="navbar-brand fw-bold d-flex align-items-center gap-2"
-          to="/"
-        >
+          to="/">
           <img
             src={process.env.PUBLIC_URL + "/images/logo1.png"}
             alt="Foodies Logo"
-            style={{
-              height: "70px",
-              width: "auto",
-              borderRadius: "6px",
-              objectFit: "contain",
-            }}
-          />
+            style={{ height: "70px", width: "auto", borderRadius: "6px", objectFit: "contain",}}/>
         </Link>
+       
         <button
           className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
+          data-bs-target="#navbarNav" >
           <span className="navbar-toggler-icon"></span>
         </button>
 

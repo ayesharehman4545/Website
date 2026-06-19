@@ -105,7 +105,7 @@ const Testimonials = () => {
                   </div>
         
                   <span className="text-light fs-1 lh-1 position-absolute top-0 end-0 pe-3 pt-2" style={{ opacity: 0.4, fontFamily: 'serif' }}>
-                    ”
+                     ”
                   </span>
                 </div>
 

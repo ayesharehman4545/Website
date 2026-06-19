@@ -97,11 +97,7 @@ const Cart = ({ cart, setCart }) => {
                       <button
                         className="btn btn-outline-danger"
                         onClick={() =>
-                          decreaseQty(item.id)
-                        }
-                      >
-                        -
-                      </button>
+                        decreaseQty(item.id) }> -</button>
 
                       <span className="fw-bold fs-5">
                         {item.quantity}
@@ -110,30 +106,21 @@ const Cart = ({ cart, setCart }) => {
                       <button
                         className="btn btn-outline-danger"
                         onClick={() =>
-                          increaseQty(item.id)
-                        }
-                      >
-                        +
-                      </button>
+                        increaseQty(item.id)}>+ </button>
 
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-1 col-6 text-center">
                     <h5 className="fw-bold text-dark">
-                      Rs.{" "}
-                      {(Number(item.price) || 0) *
-                        item.quantity}
+                      Rs.{" "} {(Number(item.price) || 0) * item.quantity}
                     </h5>
                   </div>
 
                   <div className="col-lg-1 col-md-1 col-6 text-center">
                     <button
                       className="btn btn-danger"
-                      onClick={() =>
-                        removeItem(item.id)
-                      }
-                    >
+                      onClick={() => removeItem(item.id) }>
                       <FaTrash />
                     </button>
                   </div>
